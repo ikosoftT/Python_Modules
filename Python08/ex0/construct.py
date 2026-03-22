@@ -1,14 +1,13 @@
 import sys
-import os
 import site
+import os
 
 def is_venv() -> bool:
     return sys.prefix != sys.base_prefix
 
 
-def get_env_name(path) -> str:
+def get_env_name(path: str) -> str:
     return os.path.basename(path)
-
 def main() -> None:
     py_path = sys.executable
     env_path = None
